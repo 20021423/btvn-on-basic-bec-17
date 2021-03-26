@@ -3,7 +3,7 @@
 using namespace std;
 
 // in ra so dao 
-int So_Dao(int n)
+int SoDao(int n)
 {
 	int nDao=0;
 	while (n > 0)
@@ -18,8 +18,11 @@ int So_Dao(int n)
 int main()
 {
 	int n;
-	cout < "Nhap gia tri n: ";
-	cin >> n;
-	cout << So_Dao(n);
+	do
+	{
+		cout << "Nhap n khong am: ";
+		cin >> n;
+	} while (n < 0);
+	cout << SoDao(n);
 	return 0;
 }
