@@ -47,6 +47,9 @@ int *p = new int(m); // cấp phát cho con trỏ p 1 vùng nhớ và gán giá 
 hàm realloc và new đều là cấp phát cho con trỏ và có thể tái cấp phát lại khi kích thức vùng nhớ thay đổi;
 khác nhau: new thực chất là một toán tử còn realloc là một HÀM con trỏ vô kiểu, khi cấp phát phải ép kiểu cho nó
 
+realloc tái cấp phát trên vùng nhớ cũ của nó, nếu k đủ bộ nhớ liên tiếp thì nó sẽ đi tìm vùng nhớ mới chứa đủ số vùng nhớ cấp để cho các vùng nhớ liên tiếp với nhau
+new cấp phát lại sẽ thay đổi vùng nhớ cũ lẫn địa chỉ cũ
+
 
 
 
