@@ -50,6 +50,6 @@ int main()
 		return -1;
 	}
 	NhapMang(a, ndong, ncot);
-	Tong(a, ndong, ncot);
+	cout<<Tong(a, ndong, ncot);
 	return 0;
 }
