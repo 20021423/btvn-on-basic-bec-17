@@ -33,8 +33,7 @@ void ChuanHoaMaTran(int a[][MAX], int n)
 		i++;
 	}
 }
-
-// void NhapMang(int a[][MAX], int ndong, int ncot)
+ /*void NhapMang(int a[][MAX], int ndong, int ncot)
 {
 	for (int i = 0; i < ndong; i++)
 	{
@@ -43,7 +42,7 @@ void ChuanHoaMaTran(int a[][MAX], int n)
 			cin >> a[i][j];
 		}
 	}
-}
+}*/
 void XuatMang(int a[][MAX], int ndong, int ncot)
 {
 	for (int i = 0; i < ndong; i++)
