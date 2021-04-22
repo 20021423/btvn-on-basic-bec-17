@@ -13,7 +13,8 @@
 
 #include <iostream>
 #include <iomanip>
-#define MAX 100
+#define MAX 200
+
 using namespace std;
 
 void TamGiacPascal(int a[][MAX], int n)
