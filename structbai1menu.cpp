@@ -173,6 +173,13 @@ int main()
 		case 5:
 		{
 			if (n == 0) break;
+			if (n == 1)
+			{
+				cout << "\nTong day phan so la: ";
+				XuatPhanSo(ds[0]);
+				system("pause");
+				break;
+			}
 			cout << "\nTong day phan so la: ";
 			ps sum = TongDayPhanSo(ds, n);
 			XuatPhanSo(sum);
