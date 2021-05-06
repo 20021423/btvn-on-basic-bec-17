@@ -58,6 +58,7 @@ void RutGonPhanSo(ps& x)
 ps SoSanh2PhanSo(ps a, ps b)
 {
 	int k = a.TuSo * b.MauSo - b.TuSo * a.MauSo;
+	k = k / (a.MauSo * b.MauSo);
 	if (k >= 0)
 	{
 		return a;
