@@ -34,6 +34,10 @@ struct SINHVIEN
 };
 typedef SINHVIEN sv;
 
+void XoaKiTu(string s, int vt);
+
+string ChuanHoaChuoi(string s);
+bool HoTenSinhVien(string s);
 void NhapSinhVien(sv& a);
 void NhapDanhSachSinhVien(sv ds[], int n);
 void XuatSinhVien(sv a);

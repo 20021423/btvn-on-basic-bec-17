@@ -10,11 +10,43 @@
 
 #include "struct.h"
 
+
+string ChuanHoaChuoi(string s) // chuoi khong phan biet in hoa thuong khi so sanh
+{
+	int n = s.length();
+	for (int i = 0; i < n; i++)
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= 32;
+		}
+	}
+	return s;
+}
+bool HoTenSinhVien(string s) // ham nay de check xem co ki tu khong phai letter 
+{
+	
+	int n = s.length();
+	int i = 0;
+	while (i < n)
+	{
+		if (s[i] < 65 || (s[i] > 90 && s[i] < 97) || s[i] > 122)
+		{
+			return false;
+		}
+		i++;
+	}
+	return true;
+}
+
 void NhapSinhVien(sv& a)
 {
 	cin.ignore();
-	cout << "Nhap ho ten: ";
-	getline(cin, a.hoten);
+	do
+	{
+		cout << "Nhap ho ten: ";
+		getline(cin, a.hoten);
+	} while (!HoTenSinhVien(a.hoten)); // neu ho ten chua ki tu khong phai letter thi bat nhap lai
 	cout << "\nNhap tuoi: ";
 	cin >> a.tuoi;
 	cin.ignore();
@@ -117,6 +149,8 @@ void SapXepTheo_Ten_TenDem(sv ds[], int n)
 		{
 			string s1 = CatTenChuoi(ds[i].hoten);
 			string s2 = CatTenChuoi(ds[j].hoten);
+			s1 = ChuanHoaChuoi(s1);
+			s2 = ChuanHoaChuoi(s2);
 			if (s1 < s2)
 			{
 				DoiCho_struct(ds[i], ds[j]);
@@ -125,6 +159,8 @@ void SapXepTheo_Ten_TenDem(sv ds[], int n)
 			{
 				s1 = CatTenDem(ds[i].hoten);
 				s2 = CatTenDem(ds[j].hoten);
+				s1 = ChuanHoaChuoi(s1);
+				s2 = ChuanHoaChuoi(s2);
 				if(s1 < s2)
 					DoiCho_struct(ds[i], ds[j]);
 			}
@@ -150,3 +186,4 @@ int main()
 	XuatDanhSachSinhVien(ds, n);
 	return 0;
 }
+
