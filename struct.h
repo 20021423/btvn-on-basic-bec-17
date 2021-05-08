@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <string>
 #define MAX 100
 using namespace std;
 
@@ -21,3 +22,23 @@ ps TongHaiPhanSo(ps a, ps b);
 ps TongDayPhanSo(ps ds[], int n);
 void ThemPhanTu(ps ds[], int& n, int vt, ps val);
 void XoaPhanTu(ps ds[], int& n, int vt);
+
+// bai2
+
+struct SINHVIEN
+{
+	string hoten;
+	int tuoi;
+	string sex;
+	double GPA;
+};
+typedef SINHVIEN sv;
+
+void NhapSinhVien(sv& a);
+void NhapDanhSachSinhVien(sv ds[], int n);
+void XuatSinhVien(sv a);
+void XuatDanhSachSinhVien(sv ds[], int n);
+void DoiCho_struct(sv& a, sv& b); 
+void SapXepTheo_GPA(sv ds[], int n);
+string CatTenChuoi(const string& s);
+string CatTenDem(const string& s);
