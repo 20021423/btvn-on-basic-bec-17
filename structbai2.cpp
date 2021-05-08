@@ -145,11 +145,11 @@ void SapXepTheo_Ten_TenDem(sv ds[], int n)
 {
 	for (int i = 0; i < n; i++)
 	{
+		string s1 = CatTenChuoi(ds[i].hoten);
+		s1 = ChuanHoaChuoi(s1);
 		for (int j = i + 1; j < n; j++)
 		{
-			string s1 = CatTenChuoi(ds[i].hoten);
 			string s2 = CatTenChuoi(ds[j].hoten);
-			s1 = ChuanHoaChuoi(s1);
 			s2 = ChuanHoaChuoi(s2);
 			if (s1 < s2)
 			{
